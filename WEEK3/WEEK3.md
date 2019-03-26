@@ -172,7 +172,7 @@ cloudera 기본교육
                spark는 하나의 Application에 여러개의 Job이 들어갈 수 있다. 하둡의 에코시스템으로 개발이 되었지만 현재는 하둡처럼 하나의 큰 구조를 가지게 되었다. 로직에만 포커스를 맞출 수 있다. wokernode를 이용하여 처리하고 원한다면 추가로 더 구성을 할 수 있다는 장점이 있다. Spark Apllication을 만들때 Python이나 Scala, Java를 이용할 수 있다. Spark에서 Application을 Deployment하는 방법이 두가지가 있다. "Client Deployment Mode"와 "Cluster Deployment Mode"가 있다. 이 구성은 Spark Driver가 어디 있느냐에 따라 달라진다. Client Deployment Mode는 Spark Driver를 Client에서 돌리는 것 이고, Cluster Deployment Mode는 ApplicationMaster에서 돌리는 것이다. RDD란 (Resilient, Distributed, Dataset)이다. Resilient란 이를 이용해서 데이터나 메모리가  없어져도 그것을 다시 만들 수 있다. Resilient는 바뀐 데이터 정보를 가지고 있다. 이는 클러스터 전체 메모리에 나누어져서 저장되어 있다. 이것이 Distributed이다. RDD에서 RDD로 바꾸는것을 변환(transform)이라 한다. 그리고 그 RDD에서 만든것을 action이라 한다. container에서 도는데 execute로 돈다. YARN에서 spark가 돈다. 그러나 spark는 혼자서도 돌 수 있다. job History Server는 분산병렬을 수행하기 때문에 몇개의 잡이 도는지 알수가 없어 핸들링 할 수 가 없다. 이 말은 디버깅을 할 수 없다는 얘기이다. 이에 로그를 보고 하는데 이를 해주는게 job history이다. JobHistory에 서버를 만들어주는게 Nodemanager이다.
                spark가 빠르고 자원을 많이 잡아먹는 이유는 도는동안 쓰고있던 execute들이 컨테이너에 다 담겨있다. MapReduce는 쓰고나면 다 없어진다. 이 구조랑 비슷한게 impala인데 이러한 이유로 inpala랑 MapReduce는 같이 돌리면 안된다.
 
-◎ 목요일~금요일
+◎ 목요일 ~ 금요일
 
     * ozzie란?
         1. 정의
