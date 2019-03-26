@@ -103,7 +103,7 @@ cloudera 기본교육
     4. Maptask가 죽으면?
 
     5. Ambari에 무엇이 대체로 들어갈지
-
+        Ambari는 Hortenworks에서 cloudera manager와 같은 역할을 하는 프레임 워크이다. 현재 우리 회사에서 구성하는 환경에서는 cloudera manager을 대체로 쓰면 된다.
     6. Kudu가 뭔지
         Apache Kudu는  structure data에서 동작하는 storage engine이다. Hbase는 Laterncy time이 빠른 반면에 핸들링 할수 있는 size는 작다. random한 데이터를 찾아가기 용이하다. HDFS는 연속된 블록의 데이터들은 처리하기 쉽다. size가 큰 데이터를 처리하긴 쉽지만 laterncy는 작다. 처리해야될 데이터에 따라서 Hbase를 쓰거나 다른것을 써야지 속도가 빠르다고 Hbase만 쓰는것은 아니다. Kudu는 이러한 구조의 중간 지점이다. 두가지의 장단점을 섞어놓은것이 Kudu이다. Kudu는 HDFS와 상관없이 올라간다. 하지만 거기에 있는것처럼 read, write를 할 수 있다. 그러나 조금 불편. 그래서 Kudu랑 impala랑 같이 쓴다. Kudu는 impala랑 같이 개발되었다. 깔때는 데이터노드에 깔아야 된다. kudu 구조도 3node구조이다. master와 slave구조이다.
 
